@@ -1,0 +1,27 @@
+pipeline {
+    agent { label 'docker-agent'}
+    tools{
+        jdk 'java25'
+        maven 'Maven3'
+    }
+    stages{
+        stage("Cleanup Workspace")
+                 steps {
+                 clearWs()
+                 }
+    }
+
+    stage("Checkout from SCM")
+            steps {
+            git branch: 'main', credentialsId: 'github', url: 'https://github.com/cnraghavendra/register-app'
+            }
+   }
+}
+}
+
+
+
+
+
+
+
