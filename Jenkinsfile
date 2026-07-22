@@ -54,7 +54,7 @@ pipeline {
             }
         }
 
-        stage("Build & Push DOcker Image") {
+        stage("Build & Push Docker Image") {
             steps {
                 script {
                     docker.withRegistry('',DOCKER_PASS) {
