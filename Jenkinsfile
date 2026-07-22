@@ -43,6 +43,6 @@ pipeline {
                      waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqbe-token'
                 }
             }
-        ]
+        }
     }
 }
